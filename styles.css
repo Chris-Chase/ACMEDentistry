@@ -1,0 +1,298 @@
+@charset "utf-8";
+/*
+
+Author: Chris Chase
+Date: 08-02-2019
+Class: CIS 155
+Assignment: Project V2
+Document Propose: This is the CSS of my site.
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  /* M4LO4 Demonstrate the use of gradients - This gradient is being applied to the html backgroung. I found the gradine at
+     https://uigradients.com/#Nighthawk*/
+  background: #2980b9;  /* fallback for old browsers */
+  background: linear-gradient(to bottom, #2c3e50, #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+a#navicon {
+  display: none;
+}
+
+body {
+
+  max-width: 1200px;
+  min-width: 600px;
+  margin: auto;
+  background-color: white;
+  height: 100%;
+  color: #0e354c;
+}
+
+/* Horizontal Navigation */
+
+
+nav {
+  width: 100%;
+  height: 50px;
+  background-color: #677b98;
+  font-family: arial, "Times New Roman", sans-serif;
+}
+
+nav ul li {
+  float: left;
+  list-style-type: none;
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  display: flex;
+  line-height: 50px;
+  font-size: 1.5em;
+  padding: 0px 108.8px;
+  text-decoration: none;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #677b98;
+}
+/*  M5LO4 Use CSS for pull-down menus - The following allows the drop down menu to show up when hovered over. */
+nav ul li:hover ul {
+  display: block;
+}
+
+li a:hover {
+  background-color: #55657d;
+  color: #beecfc;
+}
+
+nav ul li ul li a {
+  padding: 0px 65px;
+}
+
+nav ul li ul li a:hover {
+  background-color: #55657d;
+  color: #beecfc;
+}
+
+/* Paragraph Style */
+
+
+
+.servicesText {
+  font-family: Verdana, "Times New Roman", sans-serif;
+  font-size: 1.2em;
+  padding: 10px 10px;
+}
+
+div h1 {
+  font-size: 1.8em;
+  text-align: center;
+  margin-top: 30px;
+  font-family: Verdana;
+  /* M4LO5 Demonstrate the use of text or box shadowing - The following aplies text shadow to the header text. */
+  text-shadow: 3px 3px #ffffff;
+}
+
+div p {
+  font-size: 1.2em;
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: 800px;
+}
+
+
+
+/* Index page */
+/* M5LO7 Demonstrate use of properties of flexbox containers - This container contains the welcome paragraph and the image on the indes page,
+   it helps align them  next to eachother.*/
+/* M5LO5 Demonstrate the use of flexboxes on a web page - .container-1 is creating a flex box to hold .indexWelcome and .indexImg.*/
+.container-1 {
+  display: flex;
+  justify-content: space-between;
+}
+/* M5LO6 Demonstrate use of properties of flexbox items - The .indexWelcome is the item in the container-1 container, this text is given a little
+   more room than the image with flex 4 compared to the image with flex 1. */
+.indexWelcome {
+  flex: 4;
+  max-width: 800px;
+  margin: 1em;
+  padding: 1em;
+  background-color: #d0e7f9;
+  border: 3px solid #c0dff8;
+  /* M4LO3 Demonstrate the use of rounded corners for borders - The border for this flex box is rounded 30px. */
+  border-radius: 30px;
+  /* M4LO2 Demonstrate the use of background images - The div container has an image being used for the background. */
+  background-image: url(img/forest.png);
+  background-size: 1000px 700px;
+
+}
+
+.indexImg {
+  flex: 1;
+  padding-top: 100px;
+  padding: 1em;
+}
+ .indexWelcome p {
+   font-family: arial, "Times New Roman", sans-serif;
+ }
+
+ figure figcaption {
+   height: 30px;
+   text-align: center;
+ }
+ figure img {
+   border: 3px solid black;
+   border-radius: 30px;
+   /* M4LO8 Demonstrate the use of transformations for 2D or 3D images - The image in the figure is skewed very slighty. */
+   transform: skew(1deg, 1deg);
+   /* M4LO6 Demonstrate the use of opacity/transparency for images  - The figure image is also slightly transparent. */
+   opacity: .85;
+ }
+
+/* Sevices Page */
+
+div.servicesText p {
+  font-size: 1.2em;
+  font-family: arial, sans-serif;
+  margin-top: 50px;
+}
+
+div.servicesImg {
+  padding-left: 200px;
+  margin-top: 100px;
+}
+
+/* Contacts Page */
+
+
+#map {
+  display: block;
+  margin-left: 1%;
+  margin-top: 100px;
+}
+
+article h1 {
+  font-size: 1.8em;
+  text-align: center;
+  margin-top: 30px;
+  font-family: Verdana;
+}
+
+article ul li {
+  text-align: center;
+  list-style-type: none;
+  font-size: 1.3em;
+  font-family: Verdana;
+  margin-top: 15px;
+  padding-top: 10px;
+  clear: left;
+  float: left;
+}
+
+/* About Page */
+
+/* M6LO7 Demonstrate how to format a table with CSS - The following CSS are formating the table on my about page. */
+table.aboutProject {
+  background: #d0e7f9;
+  border: 2px solid black;
+  width: 90%;
+  border-collapse: collapse;
+  font-size: 1.2em;
+  margin: 60px;
+  font-family: arial;
+}
+
+table.aboutProject th , table.aboutProject td {
+  border: 1px solid black;
+}
+
+table.aboutProject p {
+  margin: 5px;
+  font-size: 1em;
+}
+
+table.aboutProject th {
+  font-size: 1.2em;
+}
+table.aboutProject thead {
+  font-size: 1.4em
+}
+
+table.aboutProject tfoot {
+  font-size: .8em;
+}
+
+div.source {
+margin-left: 40px;
+}
+
+div.source ul li {
+  display: block;
+  border: 2px solid gray;
+  margin: 15px;
+  padding: 5px;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+div.source h2 {
+  margin-left: 20px;
+  margin-top: 200px;
+  font-family: arial;
+}
+
+/* Footer */
+
+footer {
+  width: 1200px;
+  position: fixed;
+  height: 50px;
+  background-color: #677b98;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+footer div {
+  display: block;
+  margin-top: 15px;
+}
+
+/* Mobile View */
+
+/* M5LO3 Use media queries to format a page differently for phones vs. PCs. - This is the media query i tried to make but could not get it to cooperate with the mobile view,
+   so it doesnt look very good.*/
+@media only screen and (max-width: 480px) {
+
+  .container-1 {
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+    width: 100%;
+  }
+
+  div.indexImg {
+    display: none;
+  }
+
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<!--
+    Author: Chris Chase
+    Date: 08-02-2019
+    Class: CIS 155
+    Assignment: Project V2
+    Document Propose: This is the Services page of my site where the services that are available are shown.
+-->
+
+  <title>Services</title>
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="img/dentist_header.jpg" alt="ACME Family Dentistry"/></a>
+  </header>
+  <nav class="horizontal">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services &#9662;</a>
+        <ul>
+          <li><a href="#">Preventative Care</a></li>
+          <li><a href="#">Teeth Whitening</a></li>
+          <li><a href="#">Pediatric Dentistry</a></li>
+          <li><a href="#">Cosmetic Dentistry</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  <div class="servicesText">
+    <h1>Services</h1>
+    <p>We offer many different kinds of services at <strong>ACME Family Dentistry</strong>, here are some of our most popular. </p>
+    <div class="servicesImg">
+      <img src="img/services.png" alt="Dentistry Services" usemap="#services_map">
+      <map name="services_map">
+        <!-- M4LO7 Demonstrate the use of image maps, including determining x and y values - The image map redirects to the services page.-->
+        <area shape="rect" coords="40,47,349,252" href="#" alt="Preventative Care" />
+        <area shape="rect" coords="461,52,739,252" href="#" alt="Teeth Whitening" />
+        <area shape="rect" coords="38,285,350,485" href="#" alt="Pediatric Dentistry" />
+        <area shape="rect" coords="433,285,760,494" href="#" alt="Comsmetic Dentistry" />
+      </map>
+
+    </div>
+  </div>
+  <footer>
+    <div>
+      &copy; 2019 ACME Family Dentistry &ndash; Site Design by Chris Chase
+    </div>
+  </footer>
+</body>
+
+</html>

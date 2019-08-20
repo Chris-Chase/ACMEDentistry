@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="keywords" content="dentist, teeth, tooth ache" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--
+    Author: Chris Chase
+    Date: 08-02-2019
+    Class: CIS 155
+    Assignment: Project V2
+    Document Propose: This is the Index page of my site where you are first directed.
+-->
+
+  <title>ACME &#8210; Family Dentistry</title>
+  <link href="styles.css" rel="stylesheet" />
+
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="img/dentist_header.jpg" alt="ACME Family Dentist"/></a>
+    <nav class="horizontal">
+      <a href="#" id="navicon">☰</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services &#9662;</a>
+          <ul>
+            <li><a href="#">Preventative Care</a></li>
+            <li><a href="#">Teeth Whitening</a></li>
+            <li><a href="#">Pediatric Dentistry</a></li>
+            <li><a href="#">Cosmetic Dentistry</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container-1">
+    <div class="indexWelcome">
+        <h1>Welcome</h1>
+        <p>For more than 50 years <strong>ACME Family Dentistry</strong> has been the preferred dentist on the Olympic peninsula.
+          We strive for excellence and always place the patients’ needs first.
+          You will always feel at home when you visit ACME Family Dentistry so please come and check us out. </p>
+    </div>
+    <!--  M4LO1 Demonstrate the use of figure boxes (HTML) - The following image and caption is inside a figure box. -->
+    <div class="indexImg">
+      <figure>
+        <img src="img/patient1.jpg" alt="dentistry" usemap="#indeximg_map" />
+        <figcaption>Photo by Geo Days on Unsplash</figcaption>
+      </figure>
+      <map name="indeximg_map">
+        <area shape="rect" coords="100,336,329,458" href="services.html" alt="Services" />
+      </map>
+    </div>
+  </div>
+
+  <footer>
+    <div>
+      &copy; 2019 ACME Family Dentistry &ndash; Site Design by Chris Chase
+    </div>
+  </footer>
+</body>
+
+</html>
