@@ -2,9 +2,9 @@
 /*
 
 Author: Chris Chase
-Date: 08-02-2019
+Date: 08-17-2019
 Class: CIS 155
-Assignment: Project V2
+Assignment: Project V3 Final
 Document Propose: This is the CSS of my site.
 
 */
@@ -67,7 +67,7 @@ nav ul li ul {
   position: absolute;
   background-color: #677b98;
 }
-/*  M5LO4 Use CSS for pull-down menus - The following allows the drop down menu to show up when hovered over. */
+
 nav ul li:hover ul {
   display: block;
 }
@@ -96,12 +96,11 @@ nav ul li ul li a:hover {
   padding: 10px 10px;
 }
 
-div h1 {
+h1 {
   font-size: 1.8em;
   text-align: center;
   margin-top: 30px;
   font-family: Verdana;
-  /* M4LO5 Demonstrate the use of text or box shadowing - The following aplies text shadow to the header text. */
   text-shadow: 3px 3px #ffffff;
 }
 
@@ -118,15 +117,12 @@ div p {
 
 
 /* Index page */
-/* M5LO7 Demonstrate use of properties of flexbox containers - This container contains the welcome paragraph and the image on the indes page,
-   it helps align them  next to eachother.*/
-/* M5LO5 Demonstrate the use of flexboxes on a web page - .container-1 is creating a flex box to hold .indexWelcome and .indexImg.*/
+
 .container-1 {
   display: flex;
   justify-content: space-between;
 }
-/* M5LO6 Demonstrate use of properties of flexbox items - The .indexWelcome is the item in the container-1 container, this text is given a little
-   more room than the image with flex 4 compared to the image with flex 1. */
+
 .indexWelcome {
   flex: 4;
   max-width: 800px;
@@ -134,9 +130,7 @@ div p {
   padding: 1em;
   background-color: #d0e7f9;
   border: 3px solid #c0dff8;
-  /* M4LO3 Demonstrate the use of rounded corners for borders - The border for this flex box is rounded 30px. */
   border-radius: 30px;
-  /* M4LO2 Demonstrate the use of background images - The div container has an image being used for the background. */
   background-image: url(img/forest.png);
   background-size: 1000px 700px;
 
@@ -149,6 +143,7 @@ div p {
 }
  .indexWelcome p {
    font-family: arial, "Times New Roman", sans-serif;
+   text-align: justify;
  }
 
  figure figcaption {
@@ -158,10 +153,6 @@ div p {
  figure img {
    border: 3px solid black;
    border-radius: 30px;
-   /* M4LO8 Demonstrate the use of transformations for 2D or 3D images - The image in the figure is skewed very slighty. */
-   transform: skew(1deg, 1deg);
-   /* M4LO6 Demonstrate the use of opacity/transparency for images  - The figure image is also slightly transparent. */
-   opacity: .85;
  }
 
 /* Sevices Page */
@@ -174,47 +165,105 @@ div.servicesText p {
 
 div.servicesImg {
   padding-left: 200px;
-  margin-top: 100px;
+}
+
+/* Sevices Sub-Menu Pages */
+
+div.pedDent, div.preCare, div.teethWhite, div.cosDent {
+  display: flex;
+}
+
+div.pedInfo p, div.preInfo p, div.whiteInfo p, div.cosInfo p {
+  max-width: 450px;
+  text-align: justify;
+  font-family: arial;
+  margin-left: 40px;
+}
+
+div.pedInfo h1, div.preInfo h1, div.whiteInfo h1, div.cosInfo h1 {
+  text-align: left;
+  margin-left: 40px;
+  margin-top: 50px;
+  font-family: arial;
+}
+
+div.pedInfo h2, div.preInfo h2, div.whiteInfo h2, div.cosInfo h2 {
+  text-align: left;
+  margin-left: 40px;
+  margin-top: 20px;
+  font-family: arial;
+}
+
+div.pedImage img, div.preImage img, div.whiteImage img, div.cosImage img {
+  border-radius: 30px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+div.pedImage figcaption, div.preImage figcaption, div.whiteImage figcaption, div.cosImage figcaption {
+  margin-left: 60px;
+  margin-top: 10px;
+  font-family: arial;
 }
 
 /* Contacts Page */
 
-
-#map {
-  display: block;
-  margin-left: 1%;
-  margin-top: 100px;
-}
-
-article h1 {
-  font-size: 1.8em;
-  text-align: center;
-  margin-top: 30px;
-  font-family: Verdana;
-}
-
-article ul li {
-  text-align: center;
-  list-style-type: none;
+form#newPatient {
+  max-width: 500px;
+  margin: 30px;
+  margin-left: 150px;
+  font-family: arial;
   font-size: 1.3em;
-  font-family: Verdana;
-  margin-top: 15px;
-  padding-top: 10px;
-  clear: left;
-  float: left;
 }
+
+form#newPatient legend {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+iframe {
+  display: flex;
+  max-width: 500px;
+  margin: 35px;
+  margin-left: 50px;
+}
+
+div.formRow > * {
+  flex: 1 1 150px;
+}
+
+div.formRow {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 15px 10px;
+}
+
+div.patientTitle {
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+
+article {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+form#newPatient input {
+  font-size: 0.8em;
+}
+
 
 /* About Page */
 
-/* M6LO7 Demonstrate how to format a table with CSS - The following CSS are formating the table on my about page. */
 table.aboutProject {
   background: #d0e7f9;
   border: 2px solid black;
   width: 90%;
   border-collapse: collapse;
   font-size: 1.2em;
-  margin: 60px;
-  font-family: arial;
+  margin: 60px 60px 0px 60px;
+  font-family: arial, sans-serif;
 }
 
 table.aboutProject th , table.aboutProject td {
@@ -238,21 +287,20 @@ table.aboutProject tfoot {
 }
 
 div.source {
-margin-left: 40px;
+margin-left: 53px;
 }
 
 div.source ul li {
   display: block;
   border: 2px solid gray;
-  margin: 15px;
+  margin: 5px;
   padding: 5px;
   max-width: 600px;
-  border-radius: 10px;
 }
 
 div.source h2 {
   margin-left: 20px;
-  margin-top: 200px;
+  margin-top: 10px;
   font-family: arial;
 }
 

@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
 <!--
     Author: Chris Chase
-    Date: 08-02-2019
+    Date: 08-17-2019
     Class: CIS 155
-    Assignment: Project V2
+    Assignment: Project V3 Final
     Document Propose: This is the Contact page where the contact info and location are shown.
 -->
 
@@ -22,25 +22,70 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services &#9662;</a>
         <ul>
-          <li><a href="#">Preventative Care</a></li>
-          <li><a href="#">Teeth Whitening</a></li>
-          <li><a href="#">Pediatric Dentistry</a></li>
-          <li><a href="#">Cosmetic Dentistry</a></li>
+          <li><a href="preventative_care.html">Preventative Care</a></li>
+          <li><a href="teeth_whitening.html">Teeth Whitening</a></li>
+          <li><a href="pediatric_dentistry.html">Pediatric Dentistry</a></li>
+          <li><a href="cosmetic_dentistry.html">Cosmetic Dentistry</a></li>
         </ul>
       </li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
   </nav>
+  <h1>Contact Us</h1>
   <article>
-    <h1>Contact Us</h1>
-
-    <a href="https://goo.gl/maps/F7CqnWMBT17eFpbD8" id="map"><img src="img/map.jpg" alt="location Quilcene"/></a>
-    <ul>
-      <li>Adress: 123 False St, Quilcene WA </li>
-      <li>Phone:(555)555-5555</li>
-      <li>Email: acmedental@email.com</li>
-    </ul>
+    <form id="newPatient" action="http://www.example.com" method="post">
+      <fieldset id="patientInfo">
+        <legend>New Patient Information</legend>
+        <div class="patientTitle">
+          <!-- M7LO7 Demonstrate the use of radio buttons in a form - Thes radio buttons allow new patients to choose a title. -->
+          <input type="radio" id="mrs" name="patientTitle">
+          <label for="mrs">Mrs</label>
+          <input type="radio" id="ms" name="patientTitle">
+          <label for="ms">Ms</label>
+          <input type="radio" id="mr" name="patientTitle">
+          <label for="mr">Mr</label>
+          <input type="radio" id="dr" name="patientTitle">
+          <label for="dr">Dr</label>
+        </div>
+        <!-- M7LO5 Demonstrate the use of a text box in a form - the following use textboxes for data entry. -->
+        <div class="formRow">
+          <label for="name">Name</label>
+          <input type="text" name="patientName" id="name" placeholder="First and Last name" />
+        </div>
+        <div class="formRow">
+          <label for="address">Street Address</label>
+          <input type="text" name="patientAddress" id="address" />
+        </div>
+        <div class="formRow">
+          <label for="city">City</label>
+          <input type="text" name="patientCity" id="city" />
+        </div>
+        <div class="formRow">
+          <label for="zip">Zip Code</label>
+          <input type="text" name="patientZip" id="zip" />
+        </div>
+        <div class="formRow">
+          <label for="phone">Phone Number</label>
+          <input type="tel" name="patientPhone" id="phone" placeholder="(123) 456-7890"/>
+        </div>
+        <div class="formRow">
+          <label for="birthdate">Birth Date</label>
+          <input type="text" name="patientBirthdate" id="birthdate" placeholder="01/01/1985"/>
+        </div>
+        <div class="formRow">
+          <label for="email">Email</label>
+          <input type="email" name="patientEmail" id="email" />
+        </div>
+        <!-- M7LO10 Demonstrate the use of a submit button in a form - This div contains the submit button for the form. -->
+        <div>
+          <input type="submit" value="Submit" />
+        </div>
+      </fieldset>
+    </form>
+    <!-- M8LO9  Demonstrate the use of the iframe element (HTML) - This iframe embeds a map from google into the webpage. -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42844.575082053474!2d-122.93550883168659!3d47.84374012534906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548fd8434add83a3%3A0x8a2c71e11a50d07b!2sQuilcene%2C+WA+98376!5e0!3m2!1sen!2sus!4v1566195264791!5m2!1sen!2sus"
+    width="500" height="545" style="border:0" allowfullscreen></iframe>
 
   </article>
   <footer>
